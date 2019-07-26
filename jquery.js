@@ -30,12 +30,6 @@ $(document).ready(function() {
 
   function updateTemperature() {
     $('#temperature').text(thermostat.temperature);
-    if(thermostat.displayUsage() === 'low usage') {
-      $('#temperature').css('color', 'green')
-    } else if(thermostat.displayUsage() === 'medium usage') {
-      $('#temperature').css('color', 'black')
-    } else {
-      $('#temperature').css('color', 'red')
-    }
+    $('#temperature').attr('class', thermostat.displayUsage())
   };
 });
