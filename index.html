@@ -4,7 +4,11 @@
 <head>
   <title>Thermostat</title>
 </head>
-<style>
+<style> 
+  .background {
+    background-color: #0099ff;
+  }
+
   a.test {
     font-weight: bold;
   }
@@ -20,29 +24,49 @@
   .high-usage {
     color: red;
   }
+
+  .center {
+    margin: auto;
+    text-align: center;
+    width: 50%;
+    border: 3px solid white;
+    padding: 10px;
+    margin-top: 20px;
+  }
+
+  p, h1, span {
+    color: beige;
+  }
+
+  .space-top {
+    margin-top: 200px;
+  }
 </style>
 
-<body>
-  <section>
-    <h1>Current Temperature: <span id="current-temperature">20</span></h1>
-    <select id="current-city">
-      <option value="london">London</option>
-      <option value="new+york">New York</option>
-      <option value="paris">Paris</option>
-      <option value="tokyo">Tokyo</option>
-    </select>
-    <h1 id="temperature"></h1>
-    <p>
-      <button id="temperature-up">+</button>
-      <button id="temperature-down">-</button>
-      <button id="temperature-reset">reset</button>
-      power saving mode is <span id="power-saving-status">On</span>
-      <span id="display-usage"></span>
-      <button id="powersaving-on">PSM on</button>
-      <button id="powersaving-off">PSM off</button>
-    </p>
-  </section>
-  <a href="https://code.jquery.com/jquery-3.4.1.js">jQuery</a>
+<body class="background">
+  <div class="space-top">
+    <section class="center">
+      <h1>Current Temperature: <span id="current-temperature">20</span></h1>
+      <select id="current-city">
+        <option value="london">London</option>
+        <option value="new+york">New York</option>
+        <option value="paris">Paris</option>
+        <option value="tokyo">Tokyo</option>
+      </select>
+      <h1 id="temperature"></h1>
+    </section>
+    <section class="center">
+      <p>
+        <button id="temperature-up">+</button>
+        <button id="temperature-down">-</button>
+        <button id="temperature-reset">reset</button>
+        power saving mode is <span id="power-saving-status">On</span>
+        <span id="display-usage"></span>
+        <button id="powersaving-on">PSM on</button>
+        <button id="powersaving-off">PSM off</button>
+      </p>
+    </section>
+</div>
   <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
   <script src="src/thermostat.js"></script>
   <script src="jquery.js"></script>
